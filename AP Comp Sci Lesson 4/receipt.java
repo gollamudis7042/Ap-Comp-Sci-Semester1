@@ -28,9 +28,19 @@ public class receipt
 		String s3 = "<<<<<<<<<<<<<<<__Receipt__>>>>>>>>>>>>>>>>";
 		System.out.printf("\n%41s", s3);
 		
+		String s6 = "Subtotal";
+		Double d6 = d + d1 + d2;
+		String s7 = "Tax";
+		Double d7 = (d + d1 + d2 + d6)*0.05;
+		String s8 = "Total";
+		Double d8 = d + d1 + d2 + d6 + d7;
+		
 		form.format(s,d);
 		form.format(s1,d1);
 		form.format(s2,d2);
+		form.format(s6,d6);
+		form.format(s7,d7);
+		form.format(s8,d8);
 		
 		String s4 = "___________________________________________________";
 		System.out.printf("\n%41s", s4);
