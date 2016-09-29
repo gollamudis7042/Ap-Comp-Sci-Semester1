@@ -8,6 +8,7 @@ public class average
 	{
 		Scanner kb = new Scanner(System.in);
 		
+		System.out.println("Please enter three numbers");
 		num1 = kb.nextDouble();
 		num2 = kb.nextDouble();
 		num3 = kb.nextDouble();

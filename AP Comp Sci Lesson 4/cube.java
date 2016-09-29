@@ -8,6 +8,7 @@ public class cube
 	{
 		Scanner kb = new Scanner(System.in);
 		
+		System.out.println("Please enter the side length");
 		side = kb.nextDouble();
 		
 		print();

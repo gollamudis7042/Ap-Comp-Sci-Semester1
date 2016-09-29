@@ -8,6 +8,7 @@ public class circle
 	{
 		Scanner kb = new Scanner(System.in);
 		
+		System.out.println("Please enter the radius");
 		r = kb.nextDouble();
 		
 		print();

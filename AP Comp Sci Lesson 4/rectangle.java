@@ -8,6 +8,7 @@ public class rectangle
 	{
 		Scanner kb = new Scanner(System.in);
 		
+		System.out.println("Please enter the length and width");
 		length = kb.nextDouble();
 		width  = kb.nextDouble();
 		
