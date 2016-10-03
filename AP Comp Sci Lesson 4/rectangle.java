@@ -2,26 +2,25 @@ import java.util.Scanner;
 
 public class rectangle
 {
-	static double length, width;
 	
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
 		
 		System.out.println("Please enter the length and width");
-		length = kb.nextDouble();
-		width  = kb.nextDouble();
+		double length = kb.nextDouble();
+		double width  = kb.nextDouble();
 		
-		print();
+		print(length,width);
 		
 	}
-	public static double calcPerim()
+	public static double calcPerim(double length, double width)
 	{
 		double perimeter  = (2*length)+(2*width);
 		return perimeter;
 	}
-	public static void print()
+	public static void print(double length, double width)
 	{
-		System.out.println("Your rectangle is " + calcPerim() + " ft around");
+		System.out.println("Your rectangle is " + calcPerim(length, width) + " ft around");
 	}
 }

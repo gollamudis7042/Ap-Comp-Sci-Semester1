@@ -2,23 +2,22 @@ import java.util.Scanner;
 
 public class cube
 {
-	static double side, sa;
 	
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
 		
 		System.out.println("Please enter the side length");
-		side = kb.nextDouble();
+		double side = kb.nextDouble();
 		
-		print();
+		print(side);
 	}
-	public static double calcSurf()
+	public static double calcSurf(double side)
 	{
 		return (side*side*6);
 	}
-	public static void print()
+	public static void print(double side)
 	{
-		System.out.println("The surface area of a cube with side length " + side + " is " + calcSurf());
+		System.out.println("The surface area of a cube with side length " + side + " is " + calcSurf(side));
 	}
 }

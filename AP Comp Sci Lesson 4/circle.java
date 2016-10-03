@@ -2,23 +2,22 @@ import java.util.Scanner;
 
 public class circle
 {
-	static double r;
 	
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
 		
 		System.out.println("Please enter the radius");
-		r = kb.nextDouble();
+		double r = kb.nextDouble();
 		
-		print();
+		print(r);
 	}
-	public static double calcArea()
+	public static double calcArea(double r)
 	{
 		return (3.14*r*r);
 	}
-	public static void print()
+	public static void print(double r)
 	{
-		System.out.println("The area of a circle with a radius of " + r + " is " + calcArea());
+		System.out.println("The area of a circle with a radius of " + r + " is " + calcArea(r));
 	}
 }
