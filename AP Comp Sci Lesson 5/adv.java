@@ -6,53 +6,53 @@ public class adv
 	{
 		Scanner kb = new Scanner(System.in);
 		
-		System.out.println("Please pick between 0 and 1");
-		int choice=kb.nextInt();
+		System.out.println("Please pick between going to school or ditching");
+		String choice=kb.nextLine();
 		
-		if(choice == 1)
+		if(choice.equals("ditching"))
 		{
-			System.out.println("Please pick between 2 and 3");
-			choice=kb.nextInt();
-			if(choice==2)
+			System.out.println("Please pick between going to the highlands or the movies");
+			choice=kb.nextLine();
+			if(choice.equals("movies"))
 			{
-				System.out.println("Please pick between 4 and 5");
-				choice=kb.nextInt();
-				if(choice==4)
-					System.out.println("End");
+				System.out.println("Please pick between ordering coke or popcorn");
+				choice=kb.nextLine();
+				if(choice.equals("coke"))
+					System.out.println("Good choice");
 				else
-					System.out.println("End");
+					System.out.println("Bad choice");
 			}	
 			else
 			{
-				System.out.println("Please pick between 6 and 7");
-				choice=kb.nextInt();
-				if(choice == 6)
-					System.out.println("End");
+				System.out.println("Please pick between McD's or Einstein");
+				choice=kb.nextLine();
+				if(choice.equals("Einstein"))
+					System.out.println("Good choice");
 				else
-					System.out.println("End");
+					System.out.println("Bad choice");
 			}	
 		}		
 		else
 		{	
-			System.out.println("Please pick between 8 and 9");
-			choice=kb.nextInt();
-			if(choice == 8)
+			System.out.println("Please pick between paying attention or dgaf");
+			choice=kb.nextLine();
+			if(choice.equals("dgaf"))
 			{
-				System.out.println("Please pick between 10 and 11");
-				choice=kb.nextInt();
-				if(choice==10)
-					System.out.println("End");
+				System.out.println("Please pick between playing on your phone or sleeping");
+				choice=kb.nextLine();
+				if(choice.equals("sleeping"))
+					System.out.println("Good night");
 				else
-					System.out.println("End");
+					System.out.println("Have fun");
 			}	
 			else
 			{	
-				System.out.println("Please pick between 12 and 13");
-				choice=kb.nextInt();
-				if(choice==12)
-					System.out.println("End");
+				System.out.println("Please pick between torture or try hard");
+				choice=kb.nextLine();
+				if(choice.equals("torture"))
+					System.out.println("You could've ditched school");
 				else
-					System.out.println("End");
+					System.out.println("Actually a loser");
 			}	
 		}		
 	}

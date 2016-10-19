@@ -3,10 +3,13 @@ import java.util.Scanner;
 public class pass
 {	
 	public static void main(String[]args)
-	{		
-		passCheck();
+	{	
+		String pass = "y";
+		String user = "n";
+		
+		passCheck(user, pass);
 	}
-	public static void passCheck()
+	public static void passCheck(String user, String pass)
 	{
 		Scanner kb = new Scanner(System.in);
 		
@@ -17,26 +20,26 @@ public class pass
 		System.out.println("Please enter the password");
 		password=kb.next();
 		
-		if(password.equals("y") && username.equals("n"))
+		if(password.equals(pass) && username.equals(user))
 		{
 			System.out.println("You are granted access");
 		}	
 		else
 		{	
-			if(username.equals("n"))
+			if(username.equals(user))
 			{
 				System.out.println("Your password is incorrect");
-				passCheck();
+				passCheck(user, pass);
 			}	
-			if(password.equals("y"))
+			if(password.equals(pass))
 			{
 				System.out.println("Your username is incorrect");
-				passCheck();
+				passCheck(user, pass);
 			}
 			else
 			{
 				System.out.println("Your username and password are incorrect");
-				passCheck();
+				passCheck(user, pass);
 			}
 		}
 	}
