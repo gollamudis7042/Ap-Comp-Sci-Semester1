@@ -13,7 +13,7 @@ public class song
 	{
 		for(int n=1;n<=i;n++)
 		{
-			System.out.printf("%5s \t",s);
+			System.out.printf("%s \t",s);
 			
 		}
 		System.out.println("");

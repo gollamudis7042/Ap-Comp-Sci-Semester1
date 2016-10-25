@@ -13,7 +13,7 @@ public class count
 		
 		for(int i=n1;i<=n;i+=n1)
 		{
-			System.out.printf("%3d \t",i);
+			System.out.printf("%d \t",i);
 		}
 	}
 }
