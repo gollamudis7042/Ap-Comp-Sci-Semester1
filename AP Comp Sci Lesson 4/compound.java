@@ -30,8 +30,8 @@ public class compound
 	}
 	public double total(double n, double p, double r, double t) 
 	{
-		double a = Math.pow((p*(r/n)+1),(n*t));
-		return(a/12/t);
+		double a = Math.pow(((r/n)+1),(n*t));
+		return(p*a/12/t);
 	}
 	public void format(String stuff, double num)
 	{
