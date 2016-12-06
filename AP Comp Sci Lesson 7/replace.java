@@ -12,14 +12,13 @@ public class replace
 	}
 	public static void r(String s)
 	{
-		int i=0;
-		while(i<s.length())
+		int i=1;
+		while(i<=s.length())
 		{
-			int f = s.indexOf("a");
-			if(f == i)
-				System.out.printf("@");
+			if((s.substring(i-1,i)).equals("a"))
+				System.out.print("@");
 			else
-				System.out.printf("%s",s.charAt(i));
+				System.out.print(s.charAt(i-1));
 			i++;
 		}
 		
