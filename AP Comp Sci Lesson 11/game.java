@@ -2,52 +2,57 @@ import java.util.Scanner;
 
 public class game
 {
-	static int bc, sc;
+	static int bc;
 	static int cs=16;
-	static String[] c;
+	static int sc;
+	static String[] clip;
 	
 	public static void main(String[]args)
 	{
-		Scanner kb = new Scanner(System.in);
-
+		Scanner kb=new Scanner(System.in);
+		
 		bc=96;
 		sc=0;
-		c= new String[cs];
+		clip= new String[cs];
 		
 		resetClip();
 		
-		while(bc>0 || sc>0)
+		while(bc>0||sc>0)
 		{
 			System.out.println("Action");
 			String action=kb.next();
 			if(action.equals("R"))
 				reload();
-			if(action.equals("S"))
+			else if(action.equals("S"))
 				System.out.println(shoot());
+			
+			printClip();
 		}
-		printClip();
+		System.out.println("out of bullets");
 	}
 	public static void resetClip()
 	{
-		for(int i=0;i<c.length;i++)
-			c[i]="[]";
+		for(int i=0;i<clip.length;i++)
+			clip[i]="[]";
 	}
 	public static String shoot()
 	{
 		if(sc>0)
 		{
-			c[sc-=1]="[]";
-			sc-=1;
-			return "Boom!!!";
+			clip[sc-1]="[]";
+			sc--;
+			return "boom!";
 		}
 		else
-			return "Reload!!!";
+		{
+			return "reload";
+		}
 	}
 	public static void reload()
 	{
 		if(bc>=cs)
 		{
-			bc=bc-cs;
+			bc-=cs;
 			sc=cs;
 		}
 		else
@@ -55,16 +60,22 @@ public class game
 			sc=bc;
 			bc=0;
 		}
+		
 		resetClip();
-		for(int i=0;i<sc;i++)
-			c[i]=" * ";
+		
+		for(int i=0; i<sc;i++)
+		{
+			clip[i]= " * ";
+		}
 	}
 	public static void printClip()
 	{
-		String o="";
-		o+="Bullets:" + "\t" + bc + "\n" + "Clip:" + "\t";
+		String o= "";
+		System.out.println("Bullets: \t" + bc + "\nClip: \t");
 		for(int i=0;i<cs;i++)
-			o=o+c[i];
+		{
+			o+=clip[i];
+		}
 		System.out.println(o);
 	}
 }
