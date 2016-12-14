@@ -23,8 +23,8 @@ public class game2
 			turn=kb.next();
 			d=(int)(Math.random()*2)+1;
 			a=(int)(Math.random()*6)+1;
+			takeD(a,d);
 		}
-		System.out.println(takeD(a,d));
 		printClip();
 	}
 	public static String takeD(int a, int d)
