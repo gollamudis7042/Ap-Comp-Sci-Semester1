@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import static java.lang.Math.*;
 
 public class mph
@@ -44,16 +43,4 @@ public class mph
 		return mp=Math.round(d / (h + m / 60.0));
 	}
 	
-	public static void main(String[]args)
-	{
-		Scanner kb = new Scanner(System.in);
-		
-		mph object = new mph(kb.nextInt(),kb.nextInt(),kb.nextInt());
-		
-		System.out.println(object.getDist()+ " miles in " + object.getHour() + " hours = " + object.getMph() + " mph");
-		
-		object.mod(5,4,3);
-		
-		System.out.println(object.getDist()+ " miles in " + object.getHour() + " hours = " + object.getMph() + " mph");
-	}
 }

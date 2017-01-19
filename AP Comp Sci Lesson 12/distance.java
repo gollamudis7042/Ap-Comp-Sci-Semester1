@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.lang.Math.*;
 
 public class distance
@@ -35,18 +34,5 @@ public class distance
 	public double getDist()
 	{
 		return d=Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-	}
-	
-	public static void main(String[]args)
-	{
-		Scanner kb = new Scanner(System.in);
-		
-		distance object = new distance(kb.nextInt(),kb.nextInt(),kb.nextInt(),kb.nextInt());
-		
-		System.out.println("distance = "+object.getDist());
-		
-		object.mod(5,4,3,2);
-		
-		System.out.println("distance = "+object.getDist());
 	}
 }
