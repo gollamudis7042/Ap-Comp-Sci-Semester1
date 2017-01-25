@@ -7,7 +7,7 @@ public class getodd
 		fill();
 		System.out.println("For the numbers ");
 		print();
-		System.out.println(" There are " + get() + " odd numbers" );
+		System.out.println(" The odds are " + get());
 	}
 	public static void fill()
 	{
@@ -21,13 +21,13 @@ public class getodd
 		for(int i=0;i<num.length;i++)
 			System.out.print(num[i]+" ");
 	}
-	public static int get()
+	public static String get()
 	{
-		int odds=0;
+		String odds="";
 		for(int i=0;i<num.length;i++)
 		{
 			if(!(num[i]%2==0))
-				odds+=1;
+				odds+=num[i]+ " ";
 		}
 		return odds;
 	}

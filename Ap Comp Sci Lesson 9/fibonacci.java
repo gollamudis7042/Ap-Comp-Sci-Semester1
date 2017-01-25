@@ -13,7 +13,7 @@ public class fibonacci
 		
 		int[] seq = new int[se];
 		
-		for(int i=0;i<=se;i++)
+		for(int i=0;i<se;i++)
 		{
 			if(i==0 || i==1)
 				seq[i]=s;
