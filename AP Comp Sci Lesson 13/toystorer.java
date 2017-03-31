@@ -1,11 +1,9 @@
-import java.util.Scanner;
 public class toystorer
 {
 	public static void main(String[]args)
 	{
-		Scanner kb = new Scanner(System.in);
 		
-		toystore t = new toystore(kb.nextLine());
+		toystore t = new toystore("Hotwheel, Car, G.I.Joe, AF, PennyRacer, Car, Matchbox, Car, Star Wars, AF, Pullback, Car, Star Wars, AF");
 		System.out.println(t);
 		System.out.println(t.getFToy());
 		System.out.println(t.getFType());

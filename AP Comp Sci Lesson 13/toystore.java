@@ -25,9 +25,9 @@ public class toystore
 			
 			if(getToy(name)==null)
 			{
-				if(type.equals("car"))
+				if(type.equals("Car"))
 					ts.add(new car(name));
-				if(type.equals("action figure"))
+				if(type.equals("AF"))
 					ts.add(new afigure(name));
 			}
 			else
