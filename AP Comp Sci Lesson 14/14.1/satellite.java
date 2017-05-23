@@ -18,17 +18,6 @@ public class satellite
        {
            printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
        }
-
-		
-		for(location l: locate)
-		{
-		double x,y;
-		x=(Math.random() * 100 + 1);
-		y=(Math.random() * 100 + 1);
-		System.out.println("After "+l.getID()+" moved ("+x+","+y+")");
-		((car)l).move(x,y);
-		System.out.println("new location ("+l.getLoc()[0]+","+l.getLoc()[1]+")");
-		}
 		
 		printout += "\n\n" + "==========================" +
                    "\nDistance from home...";
@@ -39,6 +28,17 @@ public class satellite
        }
 
         System.out.println(printout);
+		System.out.println();
+		
+		for(location l: locate)
+		{
+		double x,y;
+		x=(Math.random() * 100 + 1);
+		y=(Math.random() * 100 + 1);
+		System.out.println("After "+l.getID()+" moved ("+x+","+y+")");
+		((car)l).move(x,y);
+		System.out.println("new location ("+l.getLoc()[0]+","+l.getLoc()[1]+")");
+		}
    }
 
     public static double getDistance(double[] car, double[] home)
